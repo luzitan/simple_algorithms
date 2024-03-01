@@ -33,12 +33,47 @@
 // Напишите программу, которая принимает на вход целое число
 // из отрезка [10, 99] и показывает наибольшую цифру числа.
 
-int num = 72;
-int first = num/10;
-int second = num % 10;
-if (first > second){
-    Console.Write(first);
-} else {
-    Console.Write(second);
+// int num = 72;
+// int first = num/10;
+// int second = num % 10;
+// if (first > second){
+//     Console.Write(first);
+// } else {
+//     Console.Write(second);
+// }
+
+// Задача 4
+// Напишите программу, которая на вход принимает натуральное число N,
+// а на выходе показывает его цифры через запятую.
+
+int num = 987521;
+int result = num;
+int digit = 0;
+int i = 0;
+
+while (result > 0){
+    digit = result;
+    digit = digit % 10;
+    result = result / 10;
+    i++;
+}
+
+int result_exponent = 1;
+
+for (int j = 1; j < i+1; j++){
+    result_exponent = 1;
+    for (int k = 1; k < i+1-j; k++){
+        result_exponent *= 10;
+    }
+
+    if (j == i){
+        digit = num % 10;
+        Console.Write(digit);
+    } else {
+        digit = num / result_exponent;
+        digit = digit % 10;
+
+        Console.Write(digit + ", ");
+    }
 }
 
