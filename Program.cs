@@ -16,15 +16,29 @@
 // причём X ≠ 0 и Y ≠ 0 и выдаёт номер координатной четверти плоскости,
 // в которой находится эта точка.
 
-int x = 2;
-int y = -4;
+// int x = 2;
+// int y = -4;
 
-if (x > 0 && y > 0){
-    Console.Write(1);
-} if (x < 0 && y > 0){
-    Console.Write(2);
-} if (x < 0 && y < 0){
-    Console.Write(3);
-} if (x > 0 && y < 0){
-    Console.Write(4);
+// if (x > 0 && y > 0){
+//     Console.Write(1);
+// } if (x < 0 && y > 0){
+//     Console.Write(2);
+// } if (x < 0 && y < 0){
+//     Console.Write(3);
+// } if (x > 0 && y < 0){
+//     Console.Write(4);
+// }
+
+// Задача 3
+// Напишите программу, которая принимает на вход целое число
+// из отрезка [10, 99] и показывает наибольшую цифру числа.
+
+int num = 72;
+int first = num/10;
+int second = num % 10;
+if (first > second){
+    Console.Write(first);
+} else {
+    Console.Write(second);
 }
+
